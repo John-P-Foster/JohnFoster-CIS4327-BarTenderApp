@@ -1,0 +1,58 @@
+.backdrop {
+    background-color: rgba(95, 92, 92, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+dialog {
+    width: 90%;
+    max-width: 30rem;
+    background-color: #59e6c7;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 1rem;
+    top: 5rem;
+  }
+
+  .actions {
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+  
+  button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    padding: 0.35rem 1.25rem;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  
+  button[type="button"] {
+    background-color: aqua;
+    color: #220a3d;
+  }
+  
+  button[type="button"]:hover,
+  button[type="button"]:active {
+    background-color: rgb(132, 243, 243);
+  }
+  
+  button[type="submit"] {
+    background-color: #9c73ca;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="submit"]:active {
+    background-color: #895cce;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  }

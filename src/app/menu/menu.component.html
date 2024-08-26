@@ -1,0 +1,36 @@
+<div class="backdrop" (click)="onCancel()"></div>
+<app-custom-dialog>
+  @if(!admin){
+  <h2>Your order</h2>
+  <ul>
+    @for(drink of orderedDrinks; track drink._id){
+    <li>{{ drink.name }} {{ drink.cost }}</li>
+    }
+  </ul>
+  }
+  <h2>Drink Options</h2>
+  <form (ngSubmit)="onSubmit()">
+    <ul>
+      @for(drink of drinks; track drink._id){
+      <li>
+        <app-drink [drink]="drink"></app-drink>
+      </li>
+      <li>
+        @if(!admin){
+        <button type="button" (click)="addDrinkToOrder(drink)">
+          Add {{ drink.name }}
+        </button>
+        } @if(admin){
+        <button type="button" (click)="removeDrinkFromMenu(drink)">
+          Remove Drink From Menu
+        </button>
+        }
+      </li>
+      }
+    </ul>
+    <p class="actions">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit">Place Order</button>
+    </p>
+  </form>
+</app-custom-dialog>

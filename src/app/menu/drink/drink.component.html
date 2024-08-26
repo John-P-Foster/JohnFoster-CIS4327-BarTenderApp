@@ -1,0 +1,4 @@
+<li>
+  {{ drink.name }} Ingredients: @for(ingredient of drink.ingredients; track
+  ingredient._id){ {{ ingredient.title }}, } Cost: ${{ drink.cost }}
+</li>

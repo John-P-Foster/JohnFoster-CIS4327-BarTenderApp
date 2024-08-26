@@ -1,0 +1,13 @@
+<p>Order placed at {{ order.time | date : "shortTime" }}</p>
+<h3>Ordered Drinks</h3>
+<ul>
+  @for(drink of order.drink; track drink._id){
+  <li>{{ drink.name }}</li>
+  }
+</ul>
+
+<p>Order status:</p>
+<button type="button" (click)="orderReady(order)">
+  {{ order.ready ? "Ready" : "Not Ready" }}
+</button>
+<button type="button" (click)="deleteOrder(order)">Remove Order</button>
