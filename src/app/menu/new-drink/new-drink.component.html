@@ -11,7 +11,7 @@
       <input type="text" name="cost" id="cost" [(ngModel)]="enteredCost" />
     </p>
     <ul>
-      <h2>Ingredients required for drink.</h2>
+      <h2>Ingredients required for mix drink.</h2>
       @for(ingredient of drinkIngredients; track ingredient._id){
       <li>
         {{ ingredient.title }}
@@ -30,14 +30,14 @@
       @for(ingredient of ingredients; track ingredient._id){
       <li>
         <button type="button" (click)="addIngredient(ingredient)">
-          Add {{ ingredient.title }}
+          Add {{ ingredient.title }} to drink mix
         </button>
         <button
           class="deleteButton"
           type="button"
           (click)="deleteIngredient(ingredient)"
         >
-          Remove
+          Remove from inventory
         </button>
       </li>
       }

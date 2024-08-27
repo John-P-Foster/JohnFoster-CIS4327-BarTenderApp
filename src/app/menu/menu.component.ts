@@ -16,6 +16,7 @@ import { DrinkComponent } from './drink/drink.component';
 })
 export class MenuComponent {
   @Output() close = new EventEmitter();
+  @Output() isAddingNewDrink = new EventEmitter();
   @Input({required: true}) admin!: boolean;
 
   private appService = inject(AppService);
@@ -40,6 +41,11 @@ export class MenuComponent {
 
   addDrinkToOrder(drink: Drink){
     this.orderedDrinks.push(drink);
+  }
+
+  onAddingNewDrink(){
+    this.isAddingNewDrink.emit();
+    this.onCancel();
   }
 
   removeDrinkFromMenu(drink: Drink){

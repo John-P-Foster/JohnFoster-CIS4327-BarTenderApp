@@ -8,6 +8,7 @@
   @if(isViewingMenu){
   <app-menu
     [admin]="adminIsViewingMenu"
+    (isAddingNewDrink)="addingNewDrink(true)"
     (close)="onMenuAction(false, false)"
   ></app-menu>
   }
@@ -15,7 +16,6 @@
   @if(isViewingOrders){
   <app-orders
     (close)="viewingOrders(false)"
-    (isAddingNewDrink)="addingNewDrink(true)"
     (adminIsViewingMenu)="onMenuAction(true, true)"
   ></app-orders>
   }

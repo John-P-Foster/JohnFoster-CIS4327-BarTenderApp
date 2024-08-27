@@ -54,7 +54,11 @@
       <button class="cancelButton" type="button" (click)="onCancel()">
         Cancel
       </button>
-      @if(!admin){
+      @if(admin){
+      <button type="button" (click)="onAddingNewDrink()">
+        Add a Drink to the Menu
+      </button>
+      } @if(!admin){
       <button type="submit">Place Order</button>
       }
     </p>
