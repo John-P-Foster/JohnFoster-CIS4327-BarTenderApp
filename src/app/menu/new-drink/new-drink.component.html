@@ -12,12 +12,17 @@
     </p>
     <ul>
       <h2>Ingredients required for mix drink.</h2>
-      @for(ingredient of drinkIngredients; track ingredient._id){
-      <li>
-        {{ ingredient.title }}
-      </li>
-      }
+      <div
+        style="background-color: whitesmoke; border-radius: 10px; padding: 1rem"
+      >
+        @for(ingredient of drinkIngredients; track ingredient._id){
+        <li>
+          {{ ingredient.title }}
+        </li>
+        }
+      </div>
     </ul>
+
     <p class="actions">
       <button class="cancelButton" type="button" (click)="onCancel()">
         Cancel
@@ -32,18 +37,11 @@
         <button type="button" (click)="addIngredient(ingredient)">
           Add {{ ingredient.title }} to drink mix
         </button>
-        <button
-          class="deleteButton"
-          type="button"
-          (click)="deleteIngredient(ingredient)"
-        >
-          Remove from inventory
-        </button>
       </li>
       }
     </ul>
     <button type="button" (click)="addingNewIngredient()">
-      Add a new Ingredient
+      Manage Ingredient List
     </button>
   </form>
 </app-custom-dialog>

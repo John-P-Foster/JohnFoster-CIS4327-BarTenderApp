@@ -15,4 +15,20 @@
       </button>
     </p>
   </form>
+  <h2>Currently Available Ingredients</h2>
+
+  @for(ingredient of ingredients; track ingredient._id){
+  <div class="ingredient">
+    <span>{{ ingredient.title }}</span>
+
+    <button
+      class="deleteButton"
+      type="button"
+      style="margin-left: auto"
+      (click)="deleteIngredient(ingredient)"
+    >
+      Remove
+    </button>
+  </div>
+  }
 </app-custom-dialog>
