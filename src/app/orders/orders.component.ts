@@ -14,7 +14,7 @@ import { OrderComponent } from './order/order.component';
   standalone: true,
   imports: [CustomDialogComponent, FormsModule,CommonModule,NgFor,OrderComponent],
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css', '../shared/custom-dialog/custom-dialog.component.css' ]
+  styleUrls: ['./orders.component.css', '../shared/site-standard.css' ]
 })
 export class OrdersComponent {
   @Output() close = new EventEmitter();

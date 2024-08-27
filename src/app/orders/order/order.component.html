@@ -1,13 +1,25 @@
-<p>Order placed at {{ order.time | date : "shortTime" }}</p>
-<h3>Ordered Drinks</h3>
-<ul>
-  @for(drink of order.drink; track drink._id){
-  <li>{{ drink.name }}</li>
-  }
-</ul>
+<div class="order">
+  <h3>Order placed at {{ order.time | date : "shortTime" }}</h3>
+  <ul>
+    @for(drink of order.drink; track drink._id){
+    <li>{{ drink.name }}</li>
+    }
+  </ul>
 
-<p>Order status:</p>
-<button type="button" (click)="orderReady(order)">
-  {{ order.ready ? "Ready" : "Not Ready" }}
-</button>
-<button type="button" (click)="deleteOrder(order)">Remove Order</button>
+  Order status:
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+    <button class="readyButton" type="button" (click)="orderReady(order)">
+      {{ order.ready ? "Ready" : "Not Ready" }}
+    </button>
+    <button
+      class="deleteButton"
+      type="button"
+      (click)="deleteOrder(order)"
+      style="display: inline-block; margin-left: 10%"
+    >
+      Remove Order
+    </button>
+  </div>
+</div>

@@ -12,7 +12,7 @@ import { Drink, Order } from '../../app.models';
   standalone: true,
   imports: [CustomDialogComponent, FormsModule,CommonModule,NgFor],
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css','../../shared/custom-dialog/custom-dialog.component.css']
+  styleUrls: ['./order.component.css','../../shared/site-standard.css']
 })
 export class OrderComponent {
 

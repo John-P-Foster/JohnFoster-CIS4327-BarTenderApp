@@ -7,7 +7,9 @@
       <input type="text" name="title" id="title" [(ngModel)]="enteredName" />
     </p>
     <p class="actions">
-      <button type="button" (click)="onCancel()">Cancel</button>
+      <button class="cancelButton" type="button" (click)="onCancel()">
+        Cancel
+      </button>
       <button type="button" (click)="onSubmit()">
         Add ingredient to inventory
       </button>

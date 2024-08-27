@@ -1,4 +1,12 @@
 <li>
-  {{ drink.name }} Ingredients: @for(ingredient of drink.ingredients; track
-  ingredient._id){ {{ ingredient.title }}, } Cost: ${{ drink.cost }}
+  <div style="display: flex; align-items: center">
+    <h3>
+      <u>{{ drink.name }}</u>
+    </h3>
+    <h4>${{ drink.cost }}</h4>
+  </div>
+  <div>
+    @for(ingredient of drink.ingredients; track ingredient._id){
+    {{ ingredient.title }}, }
+  </div>
 </li>

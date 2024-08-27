@@ -11,7 +11,7 @@ import { Ingredient, Drink } from '../../app.models';
   standalone: true,
   imports: [CustomDialogComponent, FormsModule],
   templateUrl: './new-drink.component.html',
-  styleUrls: ['./new-drink.component.css', '../../shared/custom-dialog/custom-dialog.component.css']
+  styleUrls: ['./new-drink.component.css', '../../shared/site-standard.css']
 })
 export class NewDrinkComponent {
   @Output() close = new EventEmitter();

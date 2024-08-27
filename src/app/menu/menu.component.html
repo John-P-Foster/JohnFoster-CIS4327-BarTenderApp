@@ -1,36 +1,62 @@
 <div class="backdrop" (click)="onCancel()"></div>
 <app-custom-dialog>
   @if(!admin){
+
   <h2>Your order</h2>
+
   <ul>
-    @for(drink of orderedDrinks; track drink._id){
-    <li>{{ drink.name }} {{ drink.cost }}</li>
-    }
+    <div class="menuItem">
+      @for(drink of orderedDrinks; track drink._id){
+
+      <li>
+        <div style="display: flex; align-items: center">
+          <h3>{{ drink.name }}</h3>
+          <h4>{{ drink.cost }}</h4>
+        </div>
+      </li>
+
+      }
+    </div>
   </ul>
+
   }
   <h2>Drink Options</h2>
   <form (ngSubmit)="onSubmit()">
     <ul>
       @for(drink of drinks; track drink._id){
-      <li>
-        <app-drink [drink]="drink"></app-drink>
-      </li>
-      <li>
-        @if(!admin){
-        <button type="button" (click)="addDrinkToOrder(drink)">
-          Add {{ drink.name }}
-        </button>
-        } @if(admin){
-        <button type="button" (click)="removeDrinkFromMenu(drink)">
-          Remove Drink From Menu
-        </button>
-        }
-      </li>
+      <div class="menuItem">
+        <li>
+          <app-drink [drink]="drink"></app-drink>
+        </li>
+        <li>
+          @if(!admin){
+          <button
+            class="addButton"
+            type="button"
+            (click)="addDrinkToOrder(drink)"
+          >
+            Add {{ drink.name }}
+          </button>
+          } @if(admin){
+          <button
+            class="deleteButton"
+            type="button"
+            (click)="removeDrinkFromMenu(drink)"
+          >
+            Remove Drink From Menu
+          </button>
+          }
+        </li>
+      </div>
       }
     </ul>
     <p class="actions">
-      <button type="button" (click)="onCancel()">Cancel</button>
+      <button class="cancelButton" type="button" (click)="onCancel()">
+        Cancel
+      </button>
+      @if(!admin){
       <button type="submit">Place Order</button>
+      }
     </p>
   </form>
 </app-custom-dialog>

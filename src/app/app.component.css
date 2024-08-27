@@ -11,8 +11,8 @@ header {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: linear-gradient(
       to bottom,
-      #2c8d9e,
-      #aebecf
+      #5cc7da,
+      #90a1b3
     );
     padding: 1rem;
     border-radius: 12px;
@@ -27,7 +27,11 @@ main{
     
 }
 
-button{
-    margin: 0 auto;
-    display:block;
+
+button {
+  margin: 0 auto;
+  display:block;
 }
+
+
+

@@ -11,7 +11,7 @@ import { DrinkComponent } from './drink/drink.component';
   standalone: true,
   imports: [CustomDialogComponent, FormsModule, DrinkComponent],
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css', '../shared/custom-dialog/custom-dialog.component.css'
+  styleUrls: ['./menu.component.css', '../shared/site-standard.css'
   ]
 })
 export class MenuComponent {

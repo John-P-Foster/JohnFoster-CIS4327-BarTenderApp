@@ -1,0 +1,118 @@
+/*.......................................................................................
+Element CSS 
+.......................................................................................*/
+    dialog {
+        width: 90%;
+        max-width: 30rem;
+        background-color: #deeeeb;
+        border-radius: 6px;
+        border: none;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        padding: 1rem;
+        top: 5rem;
+    }
+
+    button {
+        font: inherit;
+        cursor: pointer;
+        border: none;
+        margin-top: .5rem;
+        padding: 0.35rem 1.25rem;
+        border-radius: 4px;
+        background-color: transparent;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(
+            to bottom,
+            #fdf0cd,
+            #ffba39
+          );
+        color: #220a3d;
+      }
+      
+      button:hover,
+      button:active {
+        background: linear-gradient(
+            to bottom,
+            #f8e8bf,
+            #f3a91f
+          );
+      }
+      
+      ul{
+        list-style: none;
+      }
+
+/*.......................................................................................
+Class CSS 
+.......................................................................................*/
+    .backdrop {
+        background-color: rgba(95, 92, 92, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+  .actions {
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .addButton {
+    color: black;
+    background: linear-gradient(
+        to bottom,
+        #bff0f1,
+        #589acf
+      );
+  }
+
+  .addButton:hover,
+  .addButton:active {
+    background: linear-gradient(
+        to bottom,
+        #b1f2f3,
+        #4284bb
+      );
+  }
+  
+  .cancelButton {
+    color: black;
+    background: linear-gradient(
+        to bottom,
+        #e0e2e2,
+        #848586
+      );
+  }
+
+  .cancelButton:hover,
+  .cancelButton:active {
+    background: linear-gradient(
+        to bottom,
+        #e0e2e2,
+        #656666
+      );
+  }
+
+  .deleteButton {
+    color: black;
+    background: linear-gradient(
+        to bottom,
+        #fab1b1,
+        #f85e5e
+      );
+  }
+
+  .deleteButton:hover,
+  .deleteButton:active {
+    background: linear-gradient(
+        to bottom,
+        #f79a9a,
+        #e61010
+      );
+  }
+  

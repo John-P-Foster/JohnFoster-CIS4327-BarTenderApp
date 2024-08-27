@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './custom-dialog.component.html',
-  styleUrl: './custom-dialog.component.css'
+  styleUrls: ['./custom-dialog.component.css', '../../shared/site-standard.css']
 })
 export class CustomDialogComponent {
 

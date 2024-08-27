@@ -1,7 +1,9 @@
 <header>Virtual Bar Tender App</header>
 <main>
-  <button (click)="onMenuAction(true, false)">Make An Order</button>
-  <button (click)="viewingOrders(true)">View Orders</button>
+  <button (click)="onMenuAction(true, false)" id="menuButton">
+    Make An Order
+  </button>
+  <button (click)="viewingOrders(true)" id="OrdersButton">View Orders</button>
   <!--User selects to view menu-->
   @if(isViewingMenu){
   <app-menu

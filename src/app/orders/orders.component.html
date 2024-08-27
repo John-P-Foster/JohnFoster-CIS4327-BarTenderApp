@@ -2,16 +2,16 @@
 <app-custom-dialog>
   <h2>Current Orders</h2>
   @for(order of orders; track order._id){
-
   <app-order [order]="order"></app-order>
-
   }
   <p class="actions">
-    <button type="button" (click)="onCancel()">Close Orders</button>
+    <button class="cancelButton" type="button" (click)="onCancel()">
+      Close Orders
+    </button>
     <button type="button" (click)="onAddingNewDrink()">
       Add a New Drink to Menu
     </button>
-    <button type="button" (click)="onAdminViewingMenu()">
+    <button class="deleteButton" type="button" (click)="onAdminViewingMenu()">
       Remove a Drink from Menu
     </button>
   </p>

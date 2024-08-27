@@ -10,7 +10,7 @@ import { Ingredient } from '../../app.models';
   standalone: true,
   imports: [CustomDialogComponent, FormsModule],
   templateUrl: './new-ingredient.component.html',
-  styleUrls: ['./new-ingredient.component.css', '../../shared/custom-dialog/custom-dialog.component.css']
+  styleUrls: ['./new-ingredient.component.css', '../../shared/site-standard.css']
 })
 export class NewIngredientComponent {
   @Output() close = new EventEmitter();
