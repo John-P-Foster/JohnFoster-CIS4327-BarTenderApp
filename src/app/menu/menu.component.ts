@@ -24,6 +24,7 @@ export class MenuComponent {
   
   drinks: Drink[] = [];
   orderedDrinks: Drink [] = [];
+  totalOrderCost= 0;
 
   ngOnInit(){
     this.appService.getDrinks();
@@ -39,8 +40,14 @@ export class MenuComponent {
     this.close.emit(e);
   }
 
+
   addDrinkToOrder(drink: Drink){
     this.orderedDrinks.push(drink);
+    this.totalOrderCost = 0;
+    for (drink of this.orderedDrinks) {
+      this.totalOrderCost += drink.cost;
+    }
+    
   }
 
   onAddingNewDrink(){
